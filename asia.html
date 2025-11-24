@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For Asia 💌</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #ffdde1, #ee9ca7);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 24px 28px;
+      max-width: 360px;
+      width: 90%;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin: 0 0 12px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 0 0 20px;
+    }
+
+    .highlight {
+      font-weight: 700;
+      color: #e6397f;
+    }
+
+    button {
+      border: none;
+      border-radius: 999px;
+      padding: 10px 22px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      background: #e6397f;
+      color: #ffffff;
+      box-shadow: 0 6px 14px rgba(230, 57, 127, 0.5);
+      transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.2s ease;
+    }
+
+    button:active {
+      transform: translateY(1px);
+      box-shadow: 0 4px 10px rgba(230, 57, 127, 0.4);
+    }
+
+    .small {
+      font-size: 0.8rem;
+      margin-top: 10px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Hi Asia 💖</h1>
+    <p>
+      I <span id="feeling" class="highlight">like</span> you very much.
+    </p>
+    <button id="magicButton">press me</button>
+    <div class="small" id="hintText">…if you want to see the real word 👀</div>
+  </div>
+
+  <script>
+    const feelingSpan = document.getElementById("feeling");
+    const button = document.getElementById("magicButton");
+    const hint = document.getElementById("hintText");
+
+    button.addEventListener("click", () => {
+      // Replace "like" with "l*ve"
+      feelingSpan.textContent = "l*ve";
+
+      // Optionally update button + hint after click
+      button.textContent = "oops 😳";
+      button.disabled = true;
+      hint.textContent = "yeah… I meant that.";
+    });
+  </script>
+</body>
+</html>
